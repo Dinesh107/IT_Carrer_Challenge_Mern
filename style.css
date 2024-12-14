@@ -1,0 +1,67 @@
+h1 {
+    color: red;
+}
+
+/* #p1 {
+    color: blue;
+}
+#p2 {
+    color: green;
+}
+
+#p3 {
+    color: yellowgreen;
+}
+
+#p4 {
+    color: purple;
+} 
+
+.odd {
+    color: orange;
+}
+
+.even {
+    color: pink;
+} 
+
+#countLabel {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+}
+
+#btnContainer {
+    text-align: center;
+}
+
+.buttons {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: lightseagreen;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.buttons:hover {
+    background-color: darkseagreen;
+} 
+
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
+#myButton {
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+#myLabel {
+    font-size: 3em;
+} */

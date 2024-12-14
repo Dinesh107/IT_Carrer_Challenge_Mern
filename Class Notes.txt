@@ -1,0 +1,42 @@
+Mern Stack 
+
+HTML5 
+
+CSS
+
+JS
+
+Reactjs
+
+
+HTML5 - Hyper text markup language
+
+HTML5 - Tag, attributes, classes, ids
+
+<> ---> open tag
+
+</> ---> closing tag
+
+basic structure of html
+
+<html>
+
+    <head>
+        <title>Thiloth Website</title>
+    </head>
+
+    <body>
+       
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
