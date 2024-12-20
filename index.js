@@ -556,36 +556,303 @@ let students = 20;
 
 // Number Gussing Game 
 
-const minNum = 1;
-const maxNum = 100;
+// const minNum = 1;
+// const maxNum = 100;
 
-let answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+// let answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
 
-let attempts = 0;
-let guess;
-let running = true;
+// let attempts = 0;
+// let guess;
+// let running = true;
 
-while(running) {
-     guess = (window.prompt(`Guess a number between ${minNum} and ${maxNum}`));
-     guess = Number(guess);
-     if(isNaN(guess)) {
-        window.alert(`Please enter the valid number`);
-     } else if(guess < minNum || guess > maxNum) {
-        window.alert(`Please enter a number between ${minNum} and ${maxNum}`);23
-     } else {
-        attempts++;
-        if(guess < answer) {
-            window.alert(`TOO LOW! TRY AGAIN`);
-        } else if(guess > answer) {
-            window.alert(`TOO HIGH! TRY AGAIN`);
-        } else {
-            window.alert(`Congratulations! You guessed the number in ${attempts} attempts`);
-            running = false;
-        }
-     }
-}
+// while(running) {
+//      guess = (window.prompt(`Guess a number between ${minNum} and ${maxNum}`));
+//      guess = Number(guess);
+//      if(isNaN(guess)) {
+//         window.alert(`Please enter the valid number`);
+//      } else if(guess < minNum || guess > maxNum) {
+//         window.alert(`Please enter a number between ${minNum} and ${maxNum}`);23
+//      } else {
+//         attempts++;
+//         if(guess < answer) {
+//             window.alert(`TOO LOW! TRY AGAIN`);
+//         } else if(guess > answer) {
+//             window.alert(`TOO HIGH! TRY AGAIN`);
+//         } else {
+//             window.alert(`Congratulations! You guessed the number in ${attempts} attempts`);
+//             running = false;
+//         }
+//      }
+// }
 
+// Functions :- a section of reusable code.
+// declare code once, use it whenever you want
+// call the function to execute that code
+
+// function happyBirthday(username, age) {
+//     console.log("happyBirthday to you!!!");
+//     console.log("happyBirthday to you!!!");
+//     console.log(`happyBirthday dear ${username}`);
+//     console.log("happyBirthday to you!!!");
+//     console.log(`you are ${age} years old`);
+// }
+
+// happyBirthday("navin", 25);
+// happyBirthday("thiloth", 26);
+
+// function add(x, y) {
+//     // let result = x + y;
+//     // return result;
+//     return x + y;    
+// }
+// function sub(x, y) {
+//     // let result = x + y;
+//     // return result;
+//     return x - y;    
+// }
+// function mul(x, y) {
+//     // let result = x + y;
+//     // return result;
+//     return x * y;    
+// }
+// function div(x, y) {
+//     // let result = x + y;
+//     // return result;
+//     return x / y;    
+// }
+
+// function isEven(number) {
+//     // if(number % 2 === 0) {
+//     //     return true;
+//     // } else {
+//     //     return false;
+//     // }
+//      return number % 2 === 0 ? true : false;
+// }
+
+
+// function isValidEmail(email) {
+//     // if(email.includes("@")) {
+//     //     return true;
+//     // } else {
+//     //     return false;
+//     // }
+
+//     return email.includes("@") ? true : false;
+// }
+
+// let answer = add(10,20);
+// console.log(add(10,20));
+// console.log(sub(10,20));
+// console.log(isEven(7));
+
+// console.log(isValidEmail("thiloth@gmail.com"));
+// console.log(isValidEmail("navinmeta.com"));
+
+
+// Arrays - Varaible like structure that can hold more than 1 value 
+
+// let fruits = ["apple", "orange", "kiwi", "mango", "banana"];
+
+// console.log(fruits);
+
+// fruits.push("coconut");
+
+// fruits.pop();
+
+// fruits.unshift("coconut");
+
+// fruits.shift();
+
+// let numOfFruits = fruits.length;
+// let index = fruits.indexOf("mango");
+
+// console.log(numOfFruits);
+// console.log(index);
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
+// console.log(fruits[3]);
+
+// for(let i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i]);
+// }
+
+// fruits.sort().reverse();
+
+// for (let fruit of fruits) {
+//     console.log(fruit);
+// }
+
+// Spread operator, rest parameter
+
+
+// spread operator  ...allows a iterable such as  an array or string to be expanded into seperate elements 
+
+// let numbers = [1,2,3,4,5];
+
+// let maxNums = Math.max(...numbers);
+// let minNums = Math.min(...numbers);
+
+// console.log(maxNums);
+// console.log(minNums);
+
+
+// let username = "Thiloth Student";
+
+// let letters = [...username].join("-")
+
+// console.log(letters);
+
+// let fruits = ["apple", "banana", "orange"];
+
+// let veggies = ["Tomato", "Brinjal", "Potato"]
+
+// let foods =[...fruits, ...veggies, "eggs, milks"];
+
+// console.log(foods);
+
+
+// rest parameters - ...rest allow a function work with a varaiable number of argummnets by bundling them into an array
+
+
+// function openFridge(...foods) {
+//    console.log(...foods);
+// }
+
+// function getFood(...foods) {
+//     return foods;
+// }
+
+// let food1 = "dosa";
+// let food2 = "puri";
+// let food3 = "lemon rice";
+// let food4 = "idly";
+
+//openFridge(food1, food2, food3, food4);
+
+
+
+// const foods = getFood(food1, food2, food3, food4);
+
+// console.log(foods);
+
+// function sum(...numbers) {
+
+//     let result = 0;
+//     for(let number of numbers) {
+//      result += number;
+//     }
+//     return result;
+// }
+
+// const total = sum(1, 5, 10, 20);
+
+// console.log(`Your total is ${total}`);
+
+
+// ES6 features in js
+
+// Callbacks - function that is passed as an argument to another function.
+
+
+// used to handle asynchronous operations
+// reading a file 
+// Network requests
+// interating with db
+
+// hey, when you are done, call this next
+
+// hello(wait);
+
+
+// function hello(reciver) {
+//     console.log("hello");
+//     reciver();
+// }
+
+// function leave() {
+//     console.log("leave");
+// }
+
+// function wait() {
+//   console.log("wait");   
+// }
+
+// function goodbye() {
+//     console.log("Goodbye!!!");
+// }
+
+
+// sum(displayDOM, 10, 20);
+
+// function sum(callback, x, y) {
+//     let result = x + y;
+//     callback(result);
+// }
+
+// function displayConsole(result) {
+//      console.log(result);
+// }
+
+
+// function displayConsole(result) {
+//      console.log(result);
+// }
+
+
+// function displayDOM(result) {
+//      let element = document.getElementById("myH1").textContent = result;
+
+// }
+
+// foreach() = method used to iterate over the elements of an array and apply a specified functions(callback) to each elements
+
+
+// array.forEach(callback)
+
+// element, index, array
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// numbers.forEach(square);
+// numbers.forEach(double);
+// numbers.forEach(display);
+
+
+// function double(element, index, array) {
+//     array[index] = element * 2;
+// }
+
+// function square(element, index, array) {
+//     array[index] = Math.pow(element, 2);
+// }
+
+// function display(elements) {
+//     console.log(elements);    
+// }
+
+
+
+// let fruits = ["apple", "orange", "banana"];
+
+// // fruits.forEach(upperCase);
+// fruits.forEach(capitalize);
+// fruits.forEach(display);
+
+// function upperCase(element, index, array) {
+//    array[index] = element.toUpperCase();
+// }
+
+// function capitalize(element, index, array) {
+//   array[index] = element.charAt(0).toUpperCase() + element.slice(2);
+// }
+
+// function display(element) {
+//     console.log(element);
+// }
 
 
 
