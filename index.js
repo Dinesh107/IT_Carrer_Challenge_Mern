@@ -1293,11 +1293,416 @@ let students = 20;
 
 // const friuts = [{name: "apple", color: "red"}, {}, {}, {}, {}, {}, {}]
 
+// array of objects 
+
+// const fruits =  [{name: "apple", color: "red", calories: 95}, 
+//                  {name: "orange", color: "orange", calories: 45}, 
+//                  {name: "banana", color: "yellow", calories: 105},
+//                  {name: "coconut", color: "white", calories: 159},
+//                  {name: "pineapple", color: "yellow", calories: 46}];
+
+
+
+
+
+
+//  fruits.push({name:"grapes", color: "purple", calories: 45});
+//  fruits.pop({name:"grapes", color: "purple", calories: 45});
+//  fruits.splice(1, 2);
+
+// for each 
+// fruits.forEach(fruit => console.log(fruit.calories));
+
 // sorting
 
 
 
+// sorting() - method used to sort elements of an array in place,
+// sorts elements as strings in lexicographic order, not alphabetical order.
+// lexicographic = (apphabet + number + symbols) as strings
 
+
+
+// let fruits = ["apple", "orange", "banana", "coconut", "pineapple"];
+// let numbers = [1, 3, 6, 4, 5, 2, 7, 9, 8, 10];
+
+// const people = [{name: "navin", age: 21, gpa: 8.0}, 
+//                 {name: "thiloth", age: 22, gpa: 9.0}, 
+//                 {name: "siva", age: 51, gpa: 7.0}, 
+//                 {name: "ram", age: 27, gpa: 5.0}];
+
+// fruits.sort();
+// numbers.sort((a,b) => a - b);
+// numbers.sort((a,b) => b - a);
+
+// people.sort((a, b) => a.age - b.age);
+// console.log(people);
+
+// people.sort((a, b) => b.age - a.age);
+// console.log(people);
+
+// people.sort((a, b) => a.gpa - b.gpa);
+// console.log(people);
+// people.sort((a, b) => b.gpa - a.gpa);
+// console.log(people);
+
+
+// people.sort((a, b) => a.name.localeCompare(b.name));
+// console.log(people);
+// people.sort((a, b) => b.name.localeCompare(a.name));
+// console.log(people);
+
+// console.log(people);
+
+// setTimeout - function in javascript that allows us to schedule the excecution of a function after an amount of the(milliseconds) times are approximate (varies based workload of the js runtime env)
+
+// setTimeout(callback, delay)
+
+
+
+// function sayHello() {
+//     window.alert("hello");
+// }
+
+// setTimeout(sayHello, 3000); // after 3 seconds the above function will be executed.
+
+// setTimeout(function(){
+//     window.alert("hello");
+// }, 3000)
+
+// setTimeout(() => window.alert("hello"), 3000);
+
+
+// cleartimeout() = function to cancel before it triggers 
+
+
+// const timeoutId = setTimeout(() => window.alert("hello"), 3000);
+
+// clearTimeout(timeoutId);
+
+
+// let timeoutId;
+
+// function startTimer() {
+//     timeoutId = setTimeout(()=>window.alert("hello"), 3000);
+//     console.log("timer started");
+// }
+
+// function clearTimer() {
+//     clearTimeout(timeoutId);
+//     console.log("timer cleared");
+// }
+
+
+
+// ES6 - an external file that conatains reusable code that can be imported into other javascript files.
+// write reusable code for many different apps.
+// can contains varaibles, classes, functions and more
+// introduced a prat ecmascript 2015 update 
+
+
+// synchronous  - exectes line by line consecutively in sequencial manner code that waits for an operation to complete
+
+
+// console.log("Tast 1");
+// console.log("Tast 2");
+// console.log("Tast 3");
+
+
+// Asynchronous - allows multiple operations to be performed concurrently without waiting,
+// Doesn't block the executuon flow and allow the program to continue 
+
+
+
+
+//(i/o operation, network requests, fetching data)
+
+// handle with :- callback, promises, Async/Await
+
+// function func1(callback) {
+//     setTimeout(() => { console.log("Task 1")
+//         callback();
+//     }, 3000);
+// }
+
+// function func2() {
+//     console.log("Tast 2");
+//     console.log("Tast 3");
+//     console.log("Tast 4");
+// }
+
+// func1(func2);
+
+// ErrorHandling - an object is created to represent a problem that occurs often with user input or established a coonections.
+
+
+// console.log(x);
+
+// Network issues
+// Promise rejection
+// security errors
+
+// console.log("You reach the end of the program");
+
+
+
+// try{}
+// catch {}
+// finally{}
+
+
+// try {
+//     const dividend =Number(window.prompt("Enter the dividend:"));
+//     const divisor = Number(window.prompt("Enter the divisor: "));
+    
+//     if(divisor == 0) {
+//         throw new Error("You can't divide by zero")
+//     }
+//     if(isNaN(dividend) || isNaN(divisor)) {
+//         throw new Error("Please enter valid numbers, must be numb");
+//     }
+
+//     const result = dividend / divisor;
+    
+//     console.log(result);
+// }
+// catch(error) {
+//     console.error("An error occurred:", error);
+// }
+
+// console.log("program ended");
+
+
+// DOM - Document Object model 
+// Object{} that represents the page you see in the web browser and provides us with an API to interact with it.
+// web browser constructs the DOM when it loads an HTML document and structure all the elements in tree-like representation.
+// Javascript can access the DOM to dynamically 
+// change the content, structure and style of style page
+
+
+// const username = "Ram Kumar";
+
+// const welcomeMsg = document.getElementById("welcome-msg");
+
+// welcomeMsg.textContent += username === "" ? `Guest` : username;
+
+// console.dir(document);
+
+// document.title = "My Website";
+// document.body.style.backgroundColor = "hsl(0, 0%, 15%)";
+
+
+// elements selectors = method used to target and manipulate HTML elements, that allows us to select one or multiple elements from the DOM (Document object model)
+
+// 1) document.getElementById()    returns element or null
+// 2) document.getElementsClassName() returns HTML Collection
+// 3) document.getElementsByTagName() returns HTML Collection
+// 4) document.querySelector()   returns first element or null
+// 5) document.querySelectorAll() returns NODELIST
+
+
+// const myHeading = document.getElementById("my-headinggg");
+
+// myHeading.style.backgroundColor =  "red";
+// myHeading.style.textAlign = "center";
+
+// console.log(myHeading);
+
+// const fruits = document.getElementsByClassName("fruits");
+
+// friuts[2].style.backgroundColor = "red";
+
+// for(let fruit of friuts) {
+//     fruit.style.backgroundColor = "red";
+// }
+
+// Array.from(fruits).forEach(fruit => {
+//     fruit.style.background = "red";
+// });
+
+// console.log(friuts);
+
+
+
+
+// const h4Elements = document.getElementsByTagName('h4');
+// const liElements = document.getElementsByTagName('li');
+
+
+// h4Elements[].style.backgroundColor = "red";
+// h4Elements[].style.backgroundColor = "red";
+
+// for(let liElement of liElements) {
+//     liElement.style.backgroundColor = "lightgreen";
+// }
+
+
+// const element = document.querySelector(".fruits");
+// const element = document.querySelector("h4");
+// const element = document.querySelector("li");
+// const element = document.querySelector("ul");
+// const element = document.querySelector("ol");
+
+// element.style.backgroundColor = "lightgreen";
+
+// console.log(element);
+
+
+// const fruits = document.querySelectorAll(".fruits");
+// const foods = document.querySelectorAll("li");
+
+// console.log(fruits);
+// console.log(food);
+
+// fruits[2].style.backgroundColor = "lightgreen";
+// foods[5].style.backgroundColor = "lightgreen";
+
+// foods.forEach(food => {
+//     food.style.backgroundColor = "lightgreen";
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DOM Navigation - the process of navigating through the structure of an HTML document using javascript
+
+// .firstElementChild
+// .lastElementChild
+// .nextElementSibling
+// .previousElementSibling
+// .parentElement
+// .children
+
+
+// .firstElementChild
+
+// const elements1 = document.getElementById("fruits");
+
+// const firstChild = elements1.firstElementChild;
+
+// firstChild.style.backgroundColor = "lightgreen";
+
+// const elements2 = document.getElementById("veggies");
+
+// const firstChild = elements2.firstElementChild;
+
+// firstChild.style.backgroundColor = "lightgreen";
+
+// const elements3 = document.getElementById("deserts");
+
+// const firstChild = elements3.firstElementChild;
+
+// firstChild.style.backgroundColor = "lightgreen";
+
+// const ulElements = document.querySelectorAll("ul");
+
+// ulElements.forEach(ulElement => {
+//     const firstChild = ulElement.firstElementChild;
+//     firstChild.style.backgroundColor = "lightgreen";
+// })
+
+
+// .lastElementChild
+
+// const ulElements = document.querySelectorAll("ul");
+
+// ulElements.forEach(ulElement => {
+ 
+//     const lastChild = ulElement.lastElementChild;
+//     lastChild.style.backgroundColor = "lightgreen";
+
+// });
+
+// console.log(ulElements);
+
+
+
+// .nextElementSibling
+
+// const element = document.getElementById("apple");
+// const nextSibling = element.nextElementSibling;
+// nextSibling.style.backgroundColor = "lightgreen";
+
+// const element = document.getElementById("pie");
+// const nextSibling = element.nextElementSibling;
+// nextSibling.style.backgroundColor = "lightgreen";
+
+// const element = document.getElementById("foods");
+// const nextSibling = element.nextElementSibling;
+// nextSibling.style.backgroundColor = "lightgreen";
+
+// .previousElementSibling
+
+
+// const element = document.getElementById("foods");
+// const previousSibling = element.previousElementSibling;
+// previousSibling.style.backgroundColor = "lightgreen";
+
+// .parentElement
+
+// const element = document.getElementById("deserts");
+// const parent = element.parentElement;
+// console.log(parent);
+
+
+// parent.style.backgroundColor = "lightgreen";
+
+
+// .children
+
+// const element = document.getElementById("deserts");
+
+// const children = element.children;
+
+// console.log(children);
+
+// Array.from(children).forEach(child => {
+//     child.style.backgroundColor = "lightgreen";
+// })
+
+// Add and change HTML 
+
+// h1 Ex1
+
+// step 1 CREATE THE ELEMENT
+
+const newH1 = document.createElement("h1");
+
+// STEP 2 ADD ATTRIBUTEs/PROPERTIES
+
+newH1.textContent = "I like veg briyani";
+newH1.id = "myH1";
+newH1.style.color = "red";
+newH1.style.textAlign = "center";
+
+// Step 3 APPEND ELEMENTS TO DOM
+
+// document.body.append(newH1);
+// document.body.prepend(newH1);
+// document.getElementById("box1").appendChild(newH1);
+
+// REMOVE HTML ELEMENTS
 
 
 
